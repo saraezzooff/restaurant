@@ -1,0 +1,276 @@
+<!-- http://www.templatemonsterpreview.com/demo/104258.html?_ga=2.106467587.1477548758.1594160574-222973036.1593538396 -->
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header id="navbar">
+            <a href="#" class="logo">Fresh<span>foods</span></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html" class="active" >Menu</a></li>
+                <li><a href="reservation.html" >Reservation</a></li>
+               <li><a href="location.html">Location</a></li>          
+            </ul>
+            <span class="menu_toggle" onclick="menuToggle();"></span>
+        </header>
+        <div class="contanier">
+            <h1>Today's Menu</h1>
+            <div class="dash"></div>
+            <div id="menu-content">
+                <!-- Tabs Panel -->
+                <ul class="nav nav-pills" id="myTab" >
+                    <li class="nav-item"><a class="nav-link active"  data-toggle="tab" href="#appteizer" role="tab" aria-controls="appteizer" aria-selected="true">appteizer</a> </li>
+                    <li class="nav-item"><a class="nav-link"  data-toggle="tab" href="#deserts" role="tab" aria-controls="deserts" aria-selected="false">deserts</a> </li>
+                    <li class="nav-item"><a class="nav-link"  data-toggle="tab" href="#menu-dishes" role="tab" aria-controls="menu-dishes" aria-selected="false">menu dishes</a> </li>
+                    <li class="nav-item"><a class="nav-link"  data-toggle="tab" href="#for-kids" role="tab" aria-controls="for-kids" aria-selected="false">for kids</a> </li>
+                </ul>
+                <!-- Tabs Content -->
+                <div class="tab-content" id="myTabContent">
+                    <!-- Appteizer  Content -->
+                    <div class="tab-pane fade show active" id="appteizer" role="tabpanel" aria-labelledby="appteizer-tab">
+                        <div id="plate-row">
+                          <div id="menu-item" class="p-3">
+                            <h4>Fried Squid</h4>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, aspernatur.</p>
+                          </div>
+                    
+                          <div id="plate-comp" class="p-3">
+                            <img src="images/eggs.png">
+                          </div>
+                          <div id="plate-price" class="p-3">
+                            <span>45,75 EGP</span>
+                          </div>
+                          <div id="plate-add" class="p-3">
+                            <a  class=" btn btn-warning" href="#"> Add To Cart</a>
+                          </div>
+                        </div>
+                      <div id="plate-row">
+                         <div id="menu-item" class="p-3">
+                            <h4>Gold Nuggets</h4>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, aspernatur.</p>
+                         </div>
+                         <div id="plate-comp" class="p-3">
+                            <img src="images/milk.png">
+                          </div>
+                          <div id="plate-price" class="p-3">
+                            <span>45,75 EGP</span>
+                          </div>
+                          <div id="plate-add" class="p-3">
+                            <a  class=" btn btn-warning" href="#"> Add To Cart</a>
+                          </div>
+                      </div> 
+
+                      <div id="plate-row">
+                        <div id="menu-item" class="p-3">
+                            <h4>Hors d’oeuvres of the day</h4>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, aspernatur.</p>
+                        </div>
+                        <div id="plate-comp" class="p-3">
+                            <img src="images/fish.png">
+                          </div>
+                          <div id="plate-price" class="p-3">
+                            <span>45,75 EGP</span>
+                          </div>
+                          <div id="plate-add" class="p-3">
+                            <a  class=" btn btn-warning" href="#"> Add To Cart</a>
+                          </div>
+                        
+                      </div>
+
+                    </div>
+                    <!-- Dessert Tab Content -->
+                    <div class="tab-pane fade" id="deserts" role="tabpanel" aria-labelledby="deserts-tab">
+                        
+                                 <div id="plate-row">
+                                   <div id="menu-item" class="p-3">
+                                    <h4>Tiramisu</h4>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, earum!</p>
+                                   </div>
+                                   <div id="plate-comp" class="p-3">
+                                    <img src="images/eggs.png">
+                                  </div>
+                                  <div id="plate-price" class="p-3">
+                                    <span>45,75 EGP</span>
+                                  </div>
+                                  <div id="plate-add" class="p-3">
+                                    <a class=" btn btn-warning" href="#"> Add To Cart</a>
+                                  </div>
+
+                                 </div>
+
+                                <div id="plate-row">
+                                  <div id="menu-item" class="p-3">
+                                    <h4>Angel food cake</h4>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, earum!</p>
+                                  </div>
+                                  <div id="plate-comp" class="p-3">
+                                    <img src="images/milk.png">
+                                  </div>
+                                  <div id="plate-price" class="p-3">
+                                    <span>45,75 EGP</span>
+                                  </div>
+                                  <div id="plate-add" class="p-3">
+                                    <a class=" btn btn-warning" href="#"> Add To Cart</a>
+                                  </div>
+                                </div>
+                                <div id="plate-row">
+                                    <div id="menu-item" class="p-3">
+                                    <h4>Maltesers tiramisu</h4>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, earum!</p>
+                                    </div> 
+                                   <div id="plate-comp" class="p-3">
+                                    <img src="images/milk.png">
+                                  </div>
+                                  <div id="plate-price" class="p-3">
+                                    <span>45,75 EGP</span>
+                                 </div>
+                                <div id="plate-add" class="p-3">
+                                 <a class=" btn btn-warning" href="#"> Add To Cart</a>
+                                </div>
+                             </div>     
+                    </div>
+                    <!-- Menu Dishes Tab  Content -->
+                    <div class="tab-pane fade" id="menu-dishes" role="tabpanel" aria-labelledby="menu-dishes-tab">
+                       <div id="plate-row" class="mt-1" >
+                          <div id="menu-item" class="p-3">
+                            <h4>Pout Pout</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, officia?</p>
+                          </div>
+                          <div id="plate-comp" class="p-3">
+                              <img src="images/eggs.png">
+                          </div>
+                          <div id="plate-price" class="p-3">
+                              <span>45,75 EGP</span>
+                          </div>
+                          <div id="plate-add" class="p-3">
+                              <a class=" btn btn-warning" href="#"> Add To Cart</a>
+                          </div>
+                       </div>
+
+                       <div id="plate-row">
+                          <div id="menu-item" class="p-3">
+                            <h4>Spicy Poutine</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, officia?</p>
+                          </div>
+                          <div id="plate-comp" class="p-3">
+                            <img src="images/milk.png">
+                          </div>
+                          <div id="plate-price" class="p-3">
+                            <span>45,75 EGP</span>
+                          </div>
+                          <div id="plate-add" class="p-3">
+                            <a class=" btn btn-warning" href="#"> Add To Cart</a>
+                          </div>
+                       </div>
+                       <div id="plate-row">
+                          <div id="menu-item" class="p-3">
+                            <h4>Vegan Bowl</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, officia?</p>
+                          </div>
+                          <div id="plate-comp" class="p-3">
+                            <img src="images/fish.png">
+                          </div>
+                          <div id="plate-price" class="p-3">
+                            <span>45,75 EGP</span>
+                          </div>
+                          <div id="plate-add" class="p-3">
+                            <a class=" btn btn-warning" href="#"> Add To Cart</a>
+                          </div>
+                       </div>  
+                    </div>                   
+
+                    <!-- For Kids Tab Content -->
+                    <div class="tab-pane fade" id="for-kids" role="tabpanel" aria-labelledby="for-kids-tab">
+
+                        <div id="plate-row">
+                          <div id="menu-item" class="p-3">
+                            <h4>Poutine</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, sunt?</p>
+                          </div>
+                          <div id="plate-comp" class="p-3">
+                            <img src="images/eggs.png">
+                          </div>
+                          <div id="plate-price" class="p-3">
+                            <span>45,75 EGP</span>
+                          </div>
+                          <div id="plate-add" class="p-3">
+                            <a class=" btn btn-warning" href="#" > Add To Cart</a>
+                          </div>
+                        </div>
+                        <div id="plate-row">
+                            <div id="menu-item" class="p-3">
+                              <h4>Rabbit pogo</h4>
+                              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, sunt?</p>
+                             </div>
+                              <div id="plate-comp" class="p-3">
+                                <img src="images/milk.png">
+                              </div>
+                              <div id="plate-price" class="p-3">
+                                <span>45,75 EGP</span>
+                              </div>
+                              <div id="plate-add" class="p-3">
+                                <a class=" btn btn-warning" href="#"> Add To Cart</a>
+                              </div>
+                        </div>
+                        <div id="plate-row">
+                            <div id="menu-item" class="p-3">
+                            <h4>Cheeseburgers</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, sunt?</p>
+                           </div>
+                           <div id="plate-comp" class="p-3">
+                            <img src="images/fish.png">
+                          </div>
+                          <div id="plate-price" class="p-3">
+                            <span>45,75 EGP</span>
+                          </div>
+                          <div id="plate-add" class="p-3">
+                            <a class=" btn btn-warning" href="#"> Add To Cart</a>
+                          </div>
+                        </div>
+   
+                    </div>
+                  </div>
+  
+
+            </div>
+            <div class="icons">
+              <ul class="icons_list">
+                  <li><a href="#"><img src="images/facebook-logo.png"></a></li>
+                  <li><a href="#"><img src="images/instagram.png"> </a></li>
+                  <li><a href="#"><img src="images/twitter.png"></a></li>
+              </ul>
+          </div>
+
+
+
+            
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+    function menuToggle()
+    {
+        const navbar = document.getElementById('navbar');
+        navbar.classList.toggle('active');/*Toggle between adding and removing a class name from an element with JavaScript.*/
+        console.log(navbar);
+    }
+
+</script>
+
+  
+</body>
+</html>

@@ -1,0 +1,112 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>FreshFoods</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/style.css">
+  
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header id="navbar">
+            <a href="#" class="logo">Fresh<span>foods</span></a>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="menu.html" >Menu</a></li>
+                <li><a href="reservation.html" >Reservation</a></li>
+               <li><a href="location.html">Location</a></li>          
+            </ul>
+            <span class="menu_toggle" onclick="menuToggle();"></span>
+        </header>
+        <div class="content">
+            <div class="bannertext" id="slideshowText">
+                <div class="active">
+                    <h2> 10% OFF <br> Shop Now </h2>
+                    <p>Lorem ipsum dolor sit amet, clita populo et mel. Ad sit sint democritum, his eu fugit eloquentiam. Ne consul vituperata dissentias pri, pri soluta forensibus efficiendi at. His ex affert nullam populo.</p>
+                    <a href="#">Read More</a>
+                
+                </div>
+                <div>
+                    <h2> Eat Your <br> 
+                        Veggies
+                    </h2>
+                    <p>Lorem ipsum dolor sit amet, clita populo et mel. Ad sit sint democritum, his eu fugit eloquentiam. Ne consul vituperata dissentias pri, pri soluta forensibus efficiendi at. His ex affert nullam populo.</p>
+                    <a href="#">Read More</a>
+                
+                </div>
+                <div>
+                    <h2> Good Food <br> Good Mood
+                    </h2>
+                    <p>Lorem ipsum dolor sit amet, clita populo et mel. Ad sit sint democritum, his eu fugit eloquentiam. Ne consul vituperata dissentias pri, pri soluta forensibus efficiendi at. His ex affert nullam populo.</p>
+                    <a href="#">Read More</a>
+                
+                </div>
+            </div>
+            
+                <div class="bannerimg" id="slideshow">
+                <img src="images/banner.jpg" class="active">
+                <img src="images/banner-2.jpg">
+                <img src="images/banner-3.jpg">
+                
+                </div>
+       
+                
+                
+        </div>
+        <div class="icons">
+            <ul class="icons_list">
+                <li><a href="#"><img src="images/facebook-logo.png"></a></li>
+                <li><a href="#"><img src="images/instagram.png"> </a></li>
+                <li><a href="#"><img src="images/twitter.png"></a></li>
+            </ul>
+            <ul class="arrows">
+                <li><a href="#"><img src="images/left.png" onclick="PrevSlide();"></a></li>
+                <li><a href="#"><img src="images/right.png" onclick="NextSlide();"></a></li> 
+            </ul>
+        </div>
+    </div>
+<script>
+    const slideshow = document.getElementById('slideshow');
+    console.log(slideshow);
+    const slides = slideshow.getElementsByTagName('img');
+    const slideshowText = document.getElementById('slideshowText');
+    const slidesText = slideshowText.getElementsByTagName('div');
+    var index = 0;
+    
+    function NextSlide(){
+        slides[index].classList.remove('active');   slidesText[index].classList.remove('active');
+        index = (index + 1) % slides.length;
+        slides[index].classList.add('active');
+        slidesText[index].classList.add('active');
+    }
+    
+    function PrevSlide(){
+        slides[index].classList.remove('active');
+        slidesText[index].classList.remove('active');
+        index = (index - 1 + slides.length) % slides.length;
+        slides[index].classList.add('active');
+    slidesText[index].classList.add('active');
+
+    }
+    
+    function menuToggle()
+    {
+        const navbar = document.getElementById('navbar');
+        navbar.classList.toggle('active');/*Toggle between adding and removing a class name from an element with JavaScript.*/
+        console.log(navbar);
+       // const menuIcon =  document.querySelector('.menu_toggle');
+      //  menuIcon.style.background =('url(images/multiplication.png)');
+      //  menuIcon.style.backgroundRepeat = 'no-repeat';
+
+
+    }
+</script>
+  
+</body>
+</html>

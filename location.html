@@ -1,0 +1,63 @@
+<!-- http://www.templatemonsterpreview.com/demo/104258.html?_ga=2.106467587.1477548758.1594160574-222973036.1593538396 -->
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>GoodFoods</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/style.css">
+  
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header id="navbar">
+            <a href="#" class="logo">Fresh<span>foods</span></a>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="menu.html" >Menu</a></li>
+                <li><a href="reservation.html" >Reservation</a></li>
+               <li><a href="location.html">Location</a></li>          
+            </ul>
+            <span class="menu_toggle" onclick="menuToggle();"></span>
+        </header>
+        <div class="location-content">
+            <h1>Directions</h1>
+            <div class="dash"></div>
+            <div id="map">
+                <a href="https://goo.gl/maps/2iWpRz5QmqmJUYc59" traget="_blank">
+                    <div id="map_tile">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3084.67524640535!2d-76.71387678522167!3d39.36359027950138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81a14e7817803%3A0xab20a0e99daa17ea!2sDavid%20Chu&#39;s%20China%20Bistro!5e0!3m2!1sen!2seg!4v1582420176914!5m2!1sen!2seg" width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>                    </div>
+                </a>
+            </div>
+        
+        </div> 
+               
+
+                
+        </div>
+        <div class="icons">
+            <ul class="icons_list">
+                <li><a href="#"><img src="images/facebook-logo.png"></a></li>
+                <li><a href="#"><img src="images/instagram.png"> </a></li>
+                <li><a href="#"><img src="images/twitter.png"></a></li>
+            </ul>
+            <span class="menu_toggle" onclick="menuToggle();"></span>
+
+        </div>
+    </div>
+    <script>
+        function menuToggle()
+        {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('active');/*Toggle between adding and removing a class name from an element with JavaScript.*/
+            console.log(navbar);
+        }
+    
+    </script>
+    
+</body>
+</html>

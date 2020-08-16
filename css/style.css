@@ -1,0 +1,590 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+:root{
+
+    --orange-color : #f3c623;
+}
+
+.wrapper
+{
+    position: relative;
+    padding: 0px 100px;
+    min-height: 100vh;
+}
+
+.wrapper:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #333;
+    width: 350px;
+    height: 100%;
+    z-index: -2; /*Because the bg has a z-index of -1, it will be placed behind the ul .*/
+
+}
+.wrapper:after
+{
+    content: 'Healthy';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 18vw; /*Relative to 1% of the width of the viewport*/
+    font-weight: 700;
+    color: #000;
+    z-index: -2; /*Because the bg has a z-index of -1, it will be placed behind the ul .*/
+    opacity: 0.09;
+
+}
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+header .logo
+{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+header .logo span 
+{
+    color: var(--orange-color);
+}
+
+header ul 
+{
+    position: relative;
+    display: flex;
+    list-style: none;
+    
+}
+
+header ul li
+{
+    margin: 0 20px;
+}
+
+header ul li a
+{
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 4px 10px;
+    color: #333;
+}
+/*:nth-child() selects elements from amongst their siblings, in this case the a elements have no siblings, so you'll need to employ the :nth-child() pseudo-class to the li instead:*/
+header ul li:nth-child(3) a,
+header ul li:nth-child(4) a
+{
+    color: #fff;
+}
+
+header ul li a:before
+{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--orange-color);
+    z-index: -1;
+    transition: .3s ease-in-out;
+    
+}
+
+header ul li a:hover:before,
+header ul li a.active:before
+
+{
+
+    width: 30px;
+
+}
+
+.content
+{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .bannertext
+{
+    margin-right: 50px;
+    position: relative;
+    max-width: 500px;
+}
+
+.content .bannertext div
+{
+    display: none;
+}
+
+.content .bannertext .active
+{
+    display: initial; /*Sets this property to its default value */
+}
+
+
+.content .bannertext h2
+{
+    font-size: 54px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #333;
+    line-height: 1.2em;/*Relative to the font-size of the element (2em means 2 times the size of the current font)*/
+}
+
+.content .bannertext p
+{
+    font-size: 16px;
+    color: #333;
+    line-height: 1.8em;
+    margin: 20px 0;
+    padding-bottom: 20px;
+    
+}
+
+.content .bannertext a
+{
+    position: relative;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #333;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 15px;
+    
+    
+}
+
+.content .bannertext a:before
+{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    background: var(--orange-color);
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+
+.content .bannertext a:hover:before
+{
+    width: 100%;
+}
+
+.content .bannerimg
+{
+    position: relative;
+    width: 80%;
+    height: 100vh;
+  /*  height: 440px;*/
+    /*background: #000;*/
+    
+}
+
+.content .bannerimg img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .3s;
+    opacity: 0;
+    
+}
+
+.content .bannerimg img.active 
+{
+    opacity: 1;
+}
+
+
+.icons
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.icons_list li img
+{
+    height: 30px;
+    width: 30px;
+    transition: 0.5s ease-in-out;
+}
+
+.icons_list li:hover img
+{
+    transform: translateY(-10px);
+}
+
+.arrows img
+{
+    height: 60px;
+    width: 60px;
+    
+}
+
+.icons .icons_list,
+.icons .arrows
+{
+    position: relative;
+    display: flex;
+    list-style: none;
+}
+
+.icons .icons_list li
+{
+    margin-right: 30px;
+}
+
+.icons .arrows li
+{
+    margin-left: 50px;  
+    cursor: pointer;
+    filter: invert(1);
+    transition: 0.5s ease-in-out;
+}
+
+.icons .arrows li:hover
+{
+    opacity: 0.5;
+}
+
+.menu_toggle
+{
+        display: none;
+}
+
+/* Menu Page  */
+.dash{
+    border: 1px solid var(--orange-color);
+    width: 100px;
+    height: 0;
+    margin-top: 20px;
+
+}
+
+#plate-row{
+    display: flex;
+
+}
+
+#plate-row div{
+    border: .1px solid #ccc;
+}
+.nav {
+    margin-top: 20px;
+}
+.nav-link{
+    color: #383e56;
+
+}
+.nav-link.active{
+    background-color:#888888  !important;
+    color: var(--orange-color) !important;
+
+}
+#menu-item{
+    width: 450px;
+}
+
+/* Reservation Page */
+.reservation-content h2{
+    margin-bottom: 50px;
+}
+input{
+    display: flex;
+    flex-direction: column;
+    
+}
+#people, #date, #time, input{
+    width: 200px;
+    height: 30px;
+    margin-bottom: 30px;
+}
+#name-input, #email-phone{
+    display: flex;
+}
+
+
+.btn-submit{
+    padding: 10px;
+    cursor: pointer;
+    background-color: var(--orange-color);
+    border: none;
+}
+.btn-submit:hover{
+    background-color: #383e56;
+    color: var(--orange-color);
+}
+    /* Form Control */
+.form_control {
+        padding-bottom: 20px;
+        position: relative;
+        border: none;
+}   
+
+.form_control input, input {
+    border: 1px solid #888888;
+    margin-right: 10px;
+	border-radius: 4px;
+	display: block;
+	font-size: 12px;
+	padding: 5px;
+    background-color: rgba(0,0,0,0);
+
+}
+.form_control input:focus {
+	outline: 0;
+	border-color: #888888;
+}
+
+.form_control.success input {
+	border-color: #888888;
+
+}
+
+.form_control.error input {
+	border-color: #e74c3c;
+    
+}
+
+.form_control i {
+	visibility: hidden;
+	position: absolute;
+	top: 5px;
+	right: 15px;
+}
+
+.form_control.success i.fa-check-circle {
+	color: #5b8c5a;
+	visibility: visible;
+}
+
+.form_control.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+.form_control small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 30px;
+	left: 0;
+	visibility: hidden;
+}
+
+.form_control.error small {
+	visibility: visible;
+}
+.form_control.success small {
+    visibility: hidden;
+    color: #383e56;
+}
+
+/* Location Section */
+.location-content h1{
+    color: #333;
+    margin-top: 50px;
+}
+location-content .dash{
+    width: 100px;
+    height: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#map_tile{
+    height: 250px;
+    width: 50%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+   
+}
+
+@media (max-width: 1275px){
+    #plate-row{
+        width: 650px;
+    }
+    #menu-item{
+        width: 400px;
+    }
+    #plate-comp, #plate-price, #plate-add{
+
+    }
+}
+@media (max-width: 1120px){
+    #plate-row{
+        width: 550px;
+    }
+    #menu-item{
+        width: 300px;
+    }
+ 
+}
+@media(max-width: 992px)
+{
+  .wrapper
+    {
+       padding: 20px 50px;
+    }  
+    
+    .wrapper:before
+    {
+        display: none;
+    }
+    
+    header
+    {
+        padding: 0px ;
+    }
+    
+    header ul 
+    {
+
+        width: 100%;
+        height: 100%;
+        padding: 100px 0;
+        background: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10000;
+        display: none;
+    }
+    
+    header.active ul
+    {
+        display: initial;
+
+    }
+    
+    header ul li
+    {
+        padding: 20px;
+        text-align: center !important;
+    }
+    header ul li a
+    {
+        color: #000 !important;
+        font-size: 30px;
+
+
+        
+    }
+    
+    .icons .arrows li
+    {
+        filter: invert(0);
+    }
+    
+    .content .bannertext h2 
+    {
+        font-size: 30px;
+    
+     
+
+    }
+    
+    .content
+    {
+        margin-top: 0px;
+        flex-direction: column-reverse;
+        
+        
+        
+    }
+    .content .bannerimg img
+    {
+        width: 100%;
+        height: 60vh;
+        margin: 20px 0;
+        background: #fff !important;
+    }
+    
+    .content .bannerimg 
+    {
+        height: 70vh !important;
+    }
+    
+    header.active  .menu_toggle
+    {
+         background: #fff url('../images/multiplication.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+     
+    }
+           
+
+    .content .bannertext 
+    {
+        max-width: 100%;
+        
+    }
+    
+    header ul li a:hover:before,
+    header ul li a.active:before
+    {
+        width: 100%;
+    }
+    
+ 
+    .menu_toggle
+    {
+     display: initial;
+     position: fixed;
+     right: 50px;
+     cursor: pointer;
+     padding: 8px;
+     z-index: 100000;
+     background: #fff url('../images/menu-of-three-lines.png');
+     width: 34px;
+     height: 34px;
+     background-position: 6px;
+     background-repeat: no-repeat;
+     background-size: cover;
+     
+    }
+}
+
+@media (max-width: 767px)
+{
+    .wrapper
+    {
+        padding: 20px 30px;
+    }
+    
+    .menu_toggle
+    {
+       right: 30px;
+    }
+    
+    .icons .arrows li
+    {
+        max-width: 40px;
+    }
+}
